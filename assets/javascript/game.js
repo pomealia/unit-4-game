@@ -37,6 +37,7 @@ $(document).ready(function () {
   console.log("random3: " + random3);
   console.log("random4: " + random4);
 
+
   $("#random1").click(function () {
     score = score += random1;
     console.log(score);
@@ -96,6 +97,8 @@ $(document).ready(function () {
     console.log("random2: " + random2);
     console.log("random3: " + random3);
     console.log("random4: " + random4);
+
+    score = 0;
   }
 
 })
