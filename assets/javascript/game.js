@@ -41,32 +41,32 @@ $(document).ready(function () {
   $("#random1").click(function () {
     score = score += random1;
     console.log(score);
-    $("#score").replaceWith(score);
+    $("#score").text(score);
     win();
   })
   $("#random2").click(function () {
     score = score += random2;
     console.log(score);
-    $("#score").replaceWith(score);
+    $("#score").text(score);
     win();
   })
   $("#random3").click(function () {
     score = score += random3;
     console.log(score);
-    $("#score").replaceWith(score);
+    $("#score").text(score);
     win();
   })
   $("#random4").click(function () {
     score = score += random4;
     console.log(score);
-    $("#score").replaceWith(score);
+    $("#score").text(score);
     win();
   })
 
   function win() {
     if (score === randomNumber) {
       wins++;
-      $("#wins").replaceWith(wins);
+      $("#wins").text(wins);
       console.log("you won");
       reset()
     }
@@ -77,7 +77,7 @@ $(document).ready(function () {
   function lose() {
     if (score > randomNumber) {
       losses++;
-      $("#losses").replaceWith(losses);
+      $("#losses").text(losses);
       console.log("you lose");
       reset();
     }
@@ -86,7 +86,7 @@ $(document).ready(function () {
   function reset() {
     randomNumber = Math.floor(Math.random() * (120 - 19) + 19);
     console.log(randomNumber);
-    $("#randomNumber").replaceWith(randomNumber);
+    $("#randomNumber").text(randomNumber);
 
     random1 = Math.floor(Math.random() * (12 - 3) + 3);
     random2 = Math.floor(Math.random() * (10 - 3) + 3);
